@@ -295,8 +295,8 @@ export default function WalletModal({
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
               <h5>
-                Please connect to the appropriate Binance Smart Chain network.
-                <a href="https://docs.binance.org/smart-chain/wallet/metamask.html">How?</a>
+                Please connect to the appropriate PulseChain network.
+                <a href="https://pulsechain.com">How?</a>
               </h5>
             ) : (
               'Error connecting. Try refreshing the page.'
@@ -350,8 +350,8 @@ export default function WalletModal({
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>New to BSC? &nbsp;</span>{' '}
-              <ExternalLink href="https://docs.binance.org/smart-chain/wallet/metamask.html">
+              <span>New to PulseChain? &nbsp;</span>{' '}
+              <ExternalLink href="https://pulsechain.com">
                 Learn more about wallets
               </ExternalLink>
             </Blurb>

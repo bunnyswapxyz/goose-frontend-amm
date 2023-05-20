@@ -12,12 +12,12 @@ const Menu: React.FC = props => {
   const { account, activate, deactivate } = useWeb3React()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const cakePriceUsd = useGetPriceData()
+  const carrotPriceUsd = useGetPriceData()
 
   return (
     <UikitMenu
       links={links}
-      priceLink="https://www.coingecko.com/en/coins/goose-finance"
+      priceLink="https://dexscreener.com/pulsechain/0x9cdee06ab35c0b283fa47230c94007aadb3a552b"
       account={account as string}
       login={(connectorId: ConnectorId) => {
         if (connectorId === 'walletconnect') {
@@ -36,7 +36,7 @@ const Menu: React.FC = props => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd}
+      carrotPriceUsd={carrotPriceUsd}
       {...props}
     />
   )

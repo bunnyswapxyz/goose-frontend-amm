@@ -26,18 +26,18 @@ const useGetPriceData = () => {
     const fetchData = async () => {
       try {
         if(multicallContract){
-          const {cakeAddress, busdAddress, lpAddress} = priceContracts;
+          const {carrotAddress, daiAddress, lpAddress} = priceContracts;
           const calls = [
-            [cakeAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
-            [busdAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+            [carrotAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
+            [daiAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
           ];
 
           const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
-          const [cakeAmount, busdAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
-          const cake = new BigNumber(cakeAmount);
-          const busd = new BigNumber(busdAmount);
-          const cakePrice = busd.div(cake).toNumber();
-          setData(cakePrice)
+          const [carrotAmount, daiAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
+          const carrot = new BigNumber(carrotAmount);
+          const dai = new BigNumber(daiAmount);
+          const carrotPrice = dai.div(carrot).toNumber();
+          setData(carrotPrice)
         }
       } catch (error) {
         console.error('Unable to fetch price data:', error)
