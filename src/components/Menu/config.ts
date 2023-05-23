@@ -31,11 +31,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: 'https://www.bunnyswap.xyz/nests'
   },
-  // {
-  //   label: 'Lottery',
-  //   icon: 'TicketIcon',
-  //   href: 'https://www.bunnyswap.xyz/lottery'
-  // },
+  {
+    label: 'IFO',
+    icon: 'IfoIcon',
+    href: 'https://www.bunnyswap.xyz/ifo'
+  },
   {
     label: 'Info',
     icon: 'InfoIcon',
