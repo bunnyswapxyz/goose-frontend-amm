@@ -5,7 +5,7 @@ import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
 import useGetPriceData from 'hooks/useGetPriceData'
-import { injected, bsc, walletconnect } from 'connectors'
+import { injected, bsc } from 'connectors'
 import links from './config'
 
 const Menu: React.FC = props => {
@@ -19,10 +19,7 @@ const Menu: React.FC = props => {
       links={links}
       priceLink="https://dexscreener.com/pulsechain/0x9cdee06ab35c0b283fa47230c94007aadb3a552b"
       account={account as string}
-      login={(connectorId: ConnectorId) => {
-        if (connectorId === 'walletconnect') {
-          return activate(walletconnect)
-        }
+      login={(connectorId: ConnectorId) => {        
 
         if (connectorId === 'bsc') {
           return activate(bsc)
