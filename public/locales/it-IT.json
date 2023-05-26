@@ -26,7 +26,7 @@
   "enterValueCont": "Inserisci un valore {{ missingCurrencyValue }} per continuare.",
   "selectTokenCont": "Seleziona un token per continuare.",
   "noLiquidity": "Nessuna liquidità.",
-  "insufficientLiquidity": "Liquidità insufficiente.",
+  "insufficientLiquidity": "Liquidità insufficiente.  Please try hard refreshing the page.",
   "unlockTokenCont": "Si prega di sbloccare il token per continuare.",
   "transactionDetails": "Dettagli avanzati",
   "hideDetails": "Nascondi dettagli",
